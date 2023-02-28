@@ -55,3 +55,14 @@ def product_update_view(request, pk):
         'pk': pk,
     }
     return render(request, 'product_update_view.html', context=context)
+
+
+def product_delete_view(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    return render(request, 'product_delete_view.html', context={'product': product})
+
+
+def product_confirm_delete_view(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    product.delete()
+    return redirect('products_list_view')

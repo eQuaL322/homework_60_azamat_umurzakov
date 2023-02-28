@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Удаление продукта{% endblock %}
+{% block content %}
+    <div class="container d-flex flex-column align-items-center">
+        <h2 class="my-5">Вы точно хотите удалить продукт?</h2>
+        <p class="mt-5">Наименование: {{ product.name }}</p>
+        <p class="card-text">Описание: {{ product.description }}</p>
+        <p class="card-text">Остаток: {{ product.remains }} шт</p>
+        <p class="card-text">Цена: {{ product.price }} $</p>
+        <form action="{% url 'product_confirm_delete_view' product.pk %}" method="post">
+            {% csrf_token %}
+            <p class="d-inline"><input class="btn btn-primary" type="submit" value="Да"></p>
+            <p class="d-inline"><a class="btn btn-primary" href="{% url 'products_list_view' %}">Нет</a></p>
+        </form>
+    </div>
+{% endblock %}

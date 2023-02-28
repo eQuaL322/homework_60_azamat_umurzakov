@@ -256,7 +256,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$390000$1GhH8505hLfztR0A2aeFOx$I1MHXwfC2XBABLR2QL1jW/y7awmGDo1i70lFWhyzpY4=",
-    "last_login": null,
+    "last_login": "2023-02-28T09:05:20.883Z",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -275,7 +275,7 @@
   "fields": {
     "name": "Свинина",
     "description": "Свежая свинина из деревни",
-    "image": null,
+    "image": "https://imgpng.ru/d/pork_PNG69.png",
     "category": "meat",
     "remains": 3,
     "price": "99.99"
@@ -287,7 +287,7 @@
   "fields": {
     "name": "Говядина",
     "description": null,
-    "image": null,
+    "image": "https://w7.pngwing.com/pngs/113/156/png-transparent-two-raw-meats-red-meat-beef-food-meat-roast-beef-chicken-meat-cooking.png",
     "category": "meat",
     "remains": 7,
     "price": "89.99"
@@ -299,7 +299,7 @@
   "fields": {
     "name": "Томатный",
     "description": "Из свежих томатов",
-    "image": null,
+    "image": "https://w7.pngwing.com/pngs/96/293/png-transparent-tomato-juice-pomegranate-juice-v8-vegetable-juice-tomato-juice-natural-foods-tomato-united-kingdom.png",
     "category": "juice",
     "remains": 5,
     "price": "14.99"
@@ -311,7 +311,7 @@
   "fields": {
     "name": "Молоко 3.2%",
     "description": null,
-    "image": null,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo0Rr9DcKYOakaqe_WK3wqwwL4HQoEcpzMww&usqp=CAU",
     "category": "milk",
     "remains": 2,
     "price": "9.99"
@@ -319,13 +319,25 @@
 },
 {
   "model": "store.product",
-  "pk": 5,
+  "pk": 6,
+  "fields": {
+    "name": "Апельсиновый",
+    "description": "Сок из свежих апельсинов",
+    "image": "https://img2.freepng.ru/20180328/eee/kisspng-orange-juice-apple-juice-orange-juice-5abbb736c47842.2606597415222515748048.jpg",
+    "category": "juice",
+    "remains": 3,
+    "price": "15.00"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 7,
   "fields": {
     "name": "Молоко 5.2%",
-    "description": null,
-    "image": null,
+    "description": "Свежее молоко",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo0Rr9DcKYOakaqe_WK3wqwwL4HQoEcpzMww&usqp=CAU",
     "category": "milk",
-    "remains": 1,
+    "remains": 15,
     "price": "12.99"
   }
 }
