@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block menu %}
+    <a href="{% url 'product_update_view' product.pk %}">Редактировать</a>
+{% endblock %}
 {% block content %}
     <div class="mt-5">
         <div class="col-xxl-3 card text-dark bg-light mx-4 my-5" style="max-width: 840px;">

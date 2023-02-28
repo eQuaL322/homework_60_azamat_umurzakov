@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Редактировать продукт{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row mt-5 text-center">
+            <h2>Редактировать продукт</h2>
+        </div>
+        <form action="{% url 'product_update_view' pk=pk %}" method="post">
+        {% include 'partial/product_form.html' with button_text='Сохранить' %}
+        </form>
+    </div>
+{% endblock %}

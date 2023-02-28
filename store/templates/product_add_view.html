@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Добавить новый продукт{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row mt-5 text-center">
+            <h2>Добавить новый продукт</h2>
+        </div>
+        <form action="{% url 'product_add_view' %}" method="post">
+        {% include 'partial/product_form.html' with button_text='Добавить' %}
+        </form>
+    </div>
+{% endblock %}
