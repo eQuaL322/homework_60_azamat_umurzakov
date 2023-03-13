@@ -27,7 +27,7 @@ class ProductUpdateView(UpdateView):
     context_object_name = 'product'
 
     def get_success_url(self):
-        return reverse('details', kwargs={'pk': self.object.pk})
+        return reverse('product_view', kwargs={'pk': self.object.pk})
 
 
 class ProductDeleteView(DeleteView):

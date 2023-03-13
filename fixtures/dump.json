@@ -340,5 +340,17 @@
     "remains": 15,
     "price": "12.99"
   }
+},
+{
+  "model": "store.product",
+  "pk": 12,
+  "fields": {
+    "name": "Vodka",
+    "description": "",
+    "image": "https://w7.pngwing.com/pngs/511/848/png-transparent-vodka-wine-product-kind-sweden-vodka.png",
+    "category": "other",
+    "remains": 1,
+    "price": "14.99"
+  }
 }
 ]

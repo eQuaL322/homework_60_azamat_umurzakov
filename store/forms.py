@@ -31,3 +31,7 @@ class ProductForm(forms.ModelForm):
         if price < 0:
             raise forms.ValidationError("Стоимость должна быть положительным числом")
         return price
+
+
+class SearchForm(forms.Form):
+    search = forms.CharField(max_length=20, required=False, label='Найти')

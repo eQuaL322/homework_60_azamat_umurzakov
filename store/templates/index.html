@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="col-12">
+        {% include 'partial/search_form.html' %}
+    </div>
     {% for product in products %}
         <div class="col-xxl-3 card mb-3 text-dark bg-light mx-4" style="max-width: 440px;">
             <div class="row g-0">
@@ -17,4 +20,7 @@
             </div>
         </div>
     {% endfor %}
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
 {% endblock %}
