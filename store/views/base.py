@@ -1,13 +1,13 @@
-from django.core.handlers.wsgi import WSGIRequest
-from django.shortcuts import render
+from django.views.generic import ListView
 
 from store.models import Product
 
 
-def products_list_view(request: WSGIRequest):
-    products = Product.objects.filter(remains__gt=0).order_by('category', 'name')
-    context = {
-        'products': products
-    }
+class IndexView(ListView):
+    template_name = 'index.html'
+    model = Product
+    context_object_name = 'products'
+    paginate_by = 5
 
-    return render(request, 'index.html', context=context)
+    def get_queryset(self):
+        return Product.objects.filter(remains__gte=1).order_by('category', 'name')

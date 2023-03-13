@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator
 from django.db import models
 from django.db.models import TextChoices
 
@@ -15,8 +16,12 @@ class Product(models.Model):
     image = models.TextField(max_length=2000, blank=True, null=True, verbose_name="Фото товара")
     category = models.CharField(choices=CategoryChoice.choices, max_length=20, default=CategoryChoice.OTHER,
                                 verbose_name="Категория")
-    remains = models.PositiveIntegerField(null=False, verbose_name="Остаток")
+    remains = models.PositiveIntegerField(null=False, verbose_name="Остаток", validators=[MinValueValidator(1)])
     price = models.DecimalField(max_digits=7, decimal_places=2, null=False, verbose_name="Стоимость")
 
     def __str__(self):
         return f"{self.name} {self.price}"
+
+    class Meta:
+        verbose_name = 'Продукт'
+        verbose_name_plural = 'Продукты'

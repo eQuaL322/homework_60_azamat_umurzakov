@@ -1,5 +1,6 @@
 from django import forms
-from .models import Product, CategoryChoice
+from .models import Product
+from .models.product import CategoryChoice
 
 
 class ProductForm(forms.ModelForm):
