@@ -1,5 +1,6 @@
 from django import forms
 from .models import Product
+from .models.order import Order
 from .models.product import CategoryChoice
 
 
@@ -35,3 +36,14 @@ class ProductForm(forms.ModelForm):
 
 class SearchForm(forms.Form):
     search = forms.CharField(max_length=20, required=False, label='Найти')
+
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ['name', 'phone', 'address']
+        labels = {
+            'name': 'Name',
+            'phone': 'Phone number',
+            'address': 'Address',
+        }

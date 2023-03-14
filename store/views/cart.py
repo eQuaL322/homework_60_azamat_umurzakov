@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DeleteView
 
+from store.forms import OrderForm
 from store.models import CartItem, Product
 
 
@@ -41,6 +42,7 @@ class CartView(ListView):
         context = super().get_context_data(**kwargs)
         total_cost = sum([product.product.price * product.qty for product in context['object_list']])
         context['total_cost'] = total_cost
+        context['form'] = OrderForm()
         return context
 
 
