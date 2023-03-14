@@ -8,7 +8,7 @@ from store.models.order_amount import OrderAmount
 
 
 class OrderAddView(CreateView):
-    template_name = 'add_order.html'
+    template_name = 'partial/add_order.html'
     model = Order
     form_class = OrderForm
 

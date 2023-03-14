@@ -5,10 +5,27 @@ from .models.product import CategoryChoice
 
 
 class ProductForm(forms.ModelForm):
-    category = forms.ChoiceField(choices=CategoryChoice.choices, label="Категория")
-    image = forms.URLField(max_length=2000, required=False, label="Фото товара")
-    remains = forms.IntegerField(min_value=0, required=True, label="Остаток")
-    price = forms.DecimalField(min_value=0, required=True, max_digits=7, decimal_places=2, label="Стоимость")
+    category = forms.ChoiceField(
+        choices=CategoryChoice.choices,
+        label="Категория"
+    )
+    image = forms.URLField(
+        max_length=2000,
+        required=False,
+        label="Фото товара"
+    )
+    remains = forms.IntegerField(
+        min_value=0,
+        required=True,
+        label="Остаток"
+    )
+    price = forms.DecimalField(
+        min_value=0,
+        required=True,
+        max_digits=7,
+        decimal_places=2,
+        label="Стоимость"
+    )
 
     class Meta:
         model = Product
@@ -35,7 +52,11 @@ class ProductForm(forms.ModelForm):
 
 
 class SearchForm(forms.Form):
-    search = forms.CharField(max_length=20, required=False, label='Найти')
+    search = forms.CharField(
+        max_length=20,
+        required=False,
+        label='Найти'
+    )
 
 
 class OrderForm(forms.ModelForm):

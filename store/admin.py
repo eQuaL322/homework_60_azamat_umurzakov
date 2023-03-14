@@ -2,7 +2,6 @@ from django.contrib import admin
 
 from store.models import Product
 from store.models.order import Order
-from store.models.order_amount import OrderAmount
 
 
 class ProductAdmin(admin.ModelAdmin):

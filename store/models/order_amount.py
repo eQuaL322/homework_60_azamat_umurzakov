@@ -14,4 +14,8 @@ class OrderAmount(models.Model):
         on_delete=models.CASCADE,
         verbose_name='Продукт'
     )
-    order_amount = models.IntegerField(null=False, blank=False, verbose_name='Количество')
+    order_amount = models.IntegerField(
+        null=False,
+        blank=False,
+        verbose_name='Количество'
+    )

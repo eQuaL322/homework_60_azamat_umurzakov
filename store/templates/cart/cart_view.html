@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block content %}
     <h2 class="mb-4">Корзина</h2>
     <table class="table">
@@ -25,13 +24,10 @@
             </tr>
         {% endfor %}
         </tbody>
-        <tfoot>
         <tr>
             <th colspan='2'>Итого:</th>
             <th>{{ total_cost }}$</th>
         </tr>
-        </tfoot>
     </table>
-    {% include 'partial/../add_order.html' %}
-
+    {% include 'partial/../partial/add_order.html' %}
 {% endblock %}
